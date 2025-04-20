@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .typewriter {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  .chatBox {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 24px;
+    padding: 8px 16px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+  }
+  
+  .iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  .icon {
+    color: #666;
+  }
+  
+  .sidebarToggle {
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+  }

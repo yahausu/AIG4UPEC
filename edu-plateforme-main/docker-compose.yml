@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./chat-service  # Path to your FastAPI project directory
+    container_name: chat-service
+    ports:
+      - "8000:8000"  # Expose backend internally (not to the host)
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./plateforme  # Path to your Next.js project directory
+    container_name: plateforme
+    ports:
+      - "3000:3000"  # Expose frontend to the host
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000  # Link to the backend service
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
